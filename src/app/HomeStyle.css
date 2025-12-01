@@ -1,0 +1,210 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Main-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+    
+    
+}
+
+.Main-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  background-image: url('../assets/images/moderTable.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);   
+  z-index: -1;          
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 2rem;
+    align-items: left;
+    font-weight: bold;
+    justify-content: left;
+    letter-spacing: 0rem;
+    font-family: 'Poppins', sans-serif;
+
+    padding-top: 10px;
+    /* optional */
+}
+
+.logo p span {
+    color: orangered;
+    font-weight: bold;
+    align-items: center;
+    font-size: 100%;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+.profile{
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-top: 15rem;
+    width: 15rem;
+    height: 15rem;
+}
+.profile-pic {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-image: url('../assets/images/profile_pic.jpg');
+    background-size: cover;
+    background-position: center;
+    image-orientation: flip;
+    image-rendering: auto;
+    object-fit: cover;
+    border: 2px solid white;
+}
+.work{
+    margin-top: 1rem;
+    padding: auto;
+    width: 14rem;
+    height: 1.5rem;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 1rem;
+    border-color: #f7efe9;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.outer-blink, .inner-blink{
+    margin-left: 1rem;
+    margin-top: .4rem;
+}
+.outer-blink{
+    position: absolute;
+    background-color: rgb(6, 170, 88);
+    height: .7rem;
+    width: .7rem;
+    display: flex;
+    border-radius: 50%;
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+.inner-blink{
+    left: .9%;
+    top: 7%;
+    background-color: rgb(1, 221, 1);
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.work a{
+    top: auto;
+    color: rgb(255, 255, 255);
+    font-size: .7rem;
+    text-align: center;   
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    letter-spacing: .2rem;
+   
+   
+}   
+
+.navbar a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 183, 115);
+    border-bottom: 2px solid #f7efe9;
+
+}
+.intro{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: auto;
+    
+}
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+    
+}
+
+
+
+
+@media (max-width: 640px) {
+    .header {
+        padding: 0.85rem
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.1rem
+    }
+
+    .logo h1 {
+        text-align: center;
+        width: 100%
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap
+    }
+}
+
+/* End of stylesheet - theme toggles removed as requested */
