@@ -1,0 +1,492 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Main-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+    pointer-events: none;
+
+}
+
+.Main-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-image: url('../assets/images/darkcity.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.3rem);
+    z-index: -1;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 2rem;
+    align-items: left;
+    font-weight: bold;
+    justify-content: left;
+    letter-spacing: 0rem;
+    font-family: 'Poppins', sans-serif;
+
+    padding-top: 10px;
+    /* optional */
+}
+
+.logo p span {
+    color: orangered;
+    font-weight: bold;
+    align-items: center;
+    font-size: 100%;
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+.profile {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+.profile-pic {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: inherit;
+    background-image: url('../assets/images/Profile.png');
+    background-size: cover;
+    background-position: center;
+    image-orientation: flip;
+    image-rendering: auto;
+    object-fit: cover;
+    border: 2px solid white;
+    filter: grayscale(100%);
+    transition: 0.6s ease-in-out;
+    pointer-events: painted;
+}
+
+.profile-pic:hover {
+    filter: grayscale(0%);
+}
+
+.work {
+    margin-top: 1rem;
+    padding: auto;
+
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.outer-blink,
+.inner-blink {
+    margin-left: 1rem;
+    margin-top: .4rem;
+}
+
+.outer-blink {
+    position: absolute;
+    background-color: rgb(6, 170, 88);
+    height: .7rem;
+    width: .7rem;
+    display: flex;
+    border-radius: 50%;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.inner-blink {
+    left: .9%;
+    top: 7%;
+    background-color: rgb(1, 221, 1);
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.work a {
+    top: .5rem;
+    color: rgb(255, 255, 255);
+    font-size: .7rem;
+    text-align: center;
+    align-items: center;
+    padding: 0.4rem 2rem;
+    justify-content: center;
+    text-decoration: none;
+    letter-spacing: .2rem;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 1rem;
+    border-color: #f7efe9;
+    border-style: solid;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+
+
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 183, 115);
+    border-bottom: 2px solid #f7efe9;
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0.1rem;
+
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    margin-top: -0.1%;
+    animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgb(136, 135, 135);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgb(197, 194, 194);
+    }
+}
+
+.intro-text h1 span {
+    color: rgb(240, 108, 60);
+}
+
+.base {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(207, 205, 205, 0.85);
+    margin-bottom: 1rem;
+}
+
+.contents {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(207, 205, 205, 0.85);
+    line-height: 1.6;
+    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem
+}
+
+.connection-bar {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.connection-bar a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+}
+
+.conn {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.exp {
+    background-color: rgb(121, 120, 119);
+    color: rgb(255, 255, 255);
+}
+
+.dolod {
+    background-color: rgb(2, 2, 2);
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.Followme{
+    margin-top: -10rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+.social-links{
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.me-on{
+    font-size: 1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+    
+.social-icon.facebook:hover {
+  transform: scale(1.1);
+  border-color: #00a2ff;
+  background-color: none;
+  color: #00a2ff;
+}
+
+.social-icon.instagram:hover {
+  transform: scale(1.1);
+  border-color: #ff3300;
+  background-color: linear-gradient(to bottom, #f5b183,#f88b61 ,#ff4800);
+  color: #c03333;
+}
+.social-icon.twitter:hover {
+  transform: scale(1.1);
+  border-color: #000000;
+  background-color: none;
+  color: #ffffff;
+}
+
+.social-icon.linkedin:hover {
+  transform: scale(1.1);
+  border-color: white;
+  background-color: #00a2ff;
+  color: #ffffff;
+}.social-icon.github:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: #030303;
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: 0.85rem
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.1rem
+    }
+
+    .logo h1 {
+        text-align: center;
+        width: 100%
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap
+    }
+}
+
+/* Responsive tweaks: additional breakpoints for smaller phones, tablets and medium screens */
+
+/* Very small phones — make text and profile much smaller */
+@media (max-width: 420px) {
+    .profile {
+        margin-top: 8rem;
+        width: 9.5rem;
+        height: 9.5rem
+    }
+
+    .profile-pic {
+        width: 9.5rem;
+        height: 9.5rem;
+        border-width: 1px
+    }
+
+    .intro-text h1 {
+        font-size: 1.6rem
+    }
+
+    .intro-text p,
+    .base,
+    .contents {
+        font-size: 0.85rem
+    }
+
+    .navbar a {
+        font-size: 0.95rem;
+        padding: 0.25rem
+    }
+
+    .work a {
+        padding: 0.3rem 1rem;
+        font-size: .65rem
+    }
+
+    .Main-page::before {
+        filter: blur(4px)
+    }
+
+    .header {
+        padding: 0.6rem
+    }
+    .connection-bar a {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Small */
+@media (min-width: 421px) and (max-width: 768px) {
+    .profile {
+        margin-top: 9.5rem;
+        width: 11rem;
+        height: 11rem
+    }
+
+    .profile-pic {
+        width: 11rem;
+        height: 11rem
+    }
+
+    .intro-text h1 {
+        font-size: 2rem
+    }
+
+    .navbar {
+        gap: 1rem
+    }
+
+    .navbar a {
+        font-size: 1.05rem
+    }
+
+    .work a {
+        padding: 0.35rem 1.25rem
+    }
+
+    .Main-page::before {
+        background-attachment: scroll
+    }
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .profile {
+        margin-top: 10rem;
+        width: 13rem;
+        height: 13rem
+    }
+
+    .profile-pic {
+        width: 13rem;
+        height: 13rem
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem
+    }
+
+    .navbar {
+        gap: 1.5rem
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 1200px) {
+    .header-container {
+        max-width: 1200px
+    }
+
+    .intro-text h1 {
+        font-size: 3.25rem
+    }
+}

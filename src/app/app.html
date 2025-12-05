@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+<main class="main">
+    <section class="Main-page">
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <p>{{ Logo() }}<span>.</span></p>
+                </div>
+                <div class="navbar">
+                    <a routerLink="/app" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                    <a routerLink="/about" routerLinkActive="active">About Me</a>
+                    <a routerLink="/projects" routerLinkActive="active">Experience</a>
+                    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="profile">
+            <div class="profile-pic"></div>
+        </div>
+        <div class="intro-text">
+            <div class="work">
+                <a href="#" class="Avilabe"><span class="outer-blink"></span><span class="inner-blink"></span> Available
+                    for work !</a>
+
+            </div>
+            <p class="base">Currently based in Chennai, India -- Open to relocate</p>
+            <h1>Hello, I'm <span>{{ Name() }}</span> - Web developer <br>with FullStack Expertise</h1>
+            <p class="contents">I build fast, accessible, and User-friendly web applications<br>using Front End -
+                Angular Js, HTML 5, CSS with 2+ years of experience and<br>strong full stack skills in Back End - Java
+                SpringBoot,<br>REST API, JWT, Database - MySQL, MongoDB. I am passionate about<br>creating smooth user
+                interfaces, writing clean & maintainable code.<br>I craft modern user experiences while also delivering
+                scalable backend integrations.</p>
+        </div>
+        <div class="connection-bar">
+            <a href="" class="conn">Let's Connect ➜</a>
+            <a href="" class="exp">View Experience</a>
+            <a href="" class="dolod">Download CV <lucide-angular name="download"></lucide-angular></a>
+        </div>
+    </section>
+    <div class="Followme">
+        <div class="me-on">
+            <h1>Follow Me On</h1>
+    
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100043863683993" rel="noopener noreferrer" target="_blank" class="social-icon facebook">
+                    <lucide-angular name="facebook"  ></lucide-angular>
+                </a>
+                <a href="https://twitter.com/" rel="noopener noreferrer" target="_blank" class="social-icon twitter" >
+                    <lucide-angular name="twitter"  ></lucide-angular>
+                </a>
+                <a href="https://www.linkedin.com/in/sanjaykumar-r-developer/" rel="noopener noreferrer" target="_blank" class="social-icon linkedin">
+                    <lucide-angular name="linkedin"  ></lucide-angular>
+                </a>
+                <a href="https://www.instagram.com/___s_an_ja_y_/" rel="noopener noreferrer" target="_blank" class="social-icon instagram">
+                    <lucide-angular name="instagram"  ></lucide-angular>
+                </a>
+                <a href="https://github.com/Sanjaykumar-Developer" rel="noopener noreferrer" target="_blank" class="social-icon github">
+                    <lucide-angular name="github"  ></lucide-angular>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+</html>
