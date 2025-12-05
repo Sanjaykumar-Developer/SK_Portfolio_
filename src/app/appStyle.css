@@ -490,3 +490,53 @@ body {
         font-size: 3.25rem
     }
 }
+
+/* Extra responsive refinements covering remaining elements */
+
+/* Very small phones - tighten spacing and stack nav */
+@media (max-width: 420px) {
+    .logo p { font-size: 1.25rem; padding-top: 6px }
+    .navbar { gap: 0.6rem }
+    .navbar a { font-size: 0.9rem }
+    .social-links { gap: 10px; margin-top: 12px }
+    .social-icon { padding: 6px }
+    .Followme { margin-top: -6rem }
+    .contents { padding: 0.75rem }
+    .connection-bar { gap: 0.6rem }
+    .connection-bar a { padding: 0.45rem 0.8rem }
+    .me-on { font-size: 0.9rem }
+}
+
+/* Small tablets and large phones - moderate sizes */
+@media (min-width: 421px) and (max-width: 768px) {
+    .logo p { font-size: 1.5rem }
+    .navbar { gap: 0.9rem }
+    .navbar a { font-size: 1rem }
+    .social-links { gap: 14px }
+    .social-icon { padding: 7px }
+    .Followme { margin-top: -8rem }
+    .contents { padding: 1rem }
+    .connection-bar a { padding: 1rem 1rem }
+    .me-on { font-size: 1rem }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .logo p { font-size: 1.9rem }
+    .navbar { gap: 1.25rem }
+    .navbar a { font-size: 1.1rem }
+    .profile { margin-top: 9rem }
+    .Followme { margin-top: -9rem }
+    .social-links { gap: 20px }
+    .connection-bar a { padding: 1rem 1.25rem }
+    .contents { padding: 1.25rem }
+}
+
+/* Ensure footer is responsive */
+.footer { padding: 2rem 1rem; text-align: center; color: rgba(207,205,205,0.8) }
+@media (max-width: 640px) { .footer { padding: 1rem } }
+
+/* Accessibility: increase tap targets on small screens */
+@media (max-width: 768px) {
+    .navbar a, .connection-bar a, .social-icon { min-height: 36px; min-width: 36px }
+}
